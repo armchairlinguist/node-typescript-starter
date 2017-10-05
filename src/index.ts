@@ -1,11 +1,12 @@
 import app from './App'
+import log from './utils/logger';
 
 const port = process.env.PORT || 3000
 
 app.listen(port, (err) => {
   if (err) {
-    return console.log(err)
+    return log.error(err)
   }
 
-  return console.log(`server is listening on ${port}`)
+  return log.info(`server is listening on ${port}`)
 })
